@@ -1,0 +1,63 @@
+/* NativeWind / Tailwind CSS pipeline is not active for Expo SDK 54 stability.
+   UI uses StyleSheet + theme tokens. Keep web-only polish below. */
+
+html, body, #root {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbars by default; reveal on hover */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*:hover {
+  scrollbar-color: rgba(120, 120, 120, 0.55) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.5);
+  background-clip: padding-box;
+}
+
+*:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.75);
+  background-clip: padding-box;
+}
+
+::selection {
+  background: rgba(155, 127, 212, 0.35);
+}
+
+.lift-card {
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.22s ease,
+              border-color 0.2s ease;
+}
+.lift-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(108, 78, 154, 0.22);
+}
+
+
+/* Hide any accidentally rendered CSS source text (RN-web / icon font leaks) */
+body > style + style { }
+/* Ensure icon font boxes don't show as tofu when font delayed */
+.icon, [data-icon] {
+  font-family: ionicons, Ionicons, sans-serif !important;
+}

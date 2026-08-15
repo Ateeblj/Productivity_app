@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Productivity App",
+    "slug": "productivity-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0d0d1a"
+    },
+    "ios": {
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.ateeb.productivityapp"
+    },
+    "android": {
+      "package": "com.ateeb.productivityapp",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-notifications",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera to record video notes.",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone to record video notes."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone to record voice notes."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2f66e810-b9e0-41e1-9a33-02ca1c66a82f"
+      }
+    },
+    "owner": "ateeb1",
+    "updates": {}
+  }
+}
