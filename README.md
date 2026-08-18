@@ -1,4 +1,5 @@
 # Productivity App
+<img width="960" height="480" alt="Productivityapp-ezgif com-video-to-gif-converter (1)" src="https://github.com/user-attachments/assets/dde29e7f-d707-4674-b756-180871431dfb" />
 
 **Offline-first productivity + learning roadmap app** for notes, tasks, daily/weekly/monthly/yearly planning, and AI-assisted learning roadmaps.
 
